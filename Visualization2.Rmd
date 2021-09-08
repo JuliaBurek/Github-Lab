@@ -1,0 +1,18 @@
+---
+title: "Visualization2"
+author: "Kara"
+date: "9/8/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+
+wine_quality <- read_csv("~/R/DS-3001/data/winequality-red-ddl.csv")
+cleaned <- na.omit(wine_quality)
+view(cleaned)
+```
