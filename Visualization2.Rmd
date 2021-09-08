@@ -12,7 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyverse)
 
-wine_quality <- read_csv("~/R/DS-3001/data/winequality-red-ddl.csv")
+wine_quality <- read_csv("~/Desktop/DS-3001/data/winequality-red-ddl.csv")
 cleaned <- na.omit(wine_quality)
 view(cleaned)
+graph <- ggplot(cleaned, aes(x=density, y=pH)) + geom_point(size=2, shape=23)
+graph
 ```
